@@ -1,52 +1,17 @@
-# Deep iForest
+###Important
+This repository is based on the github repository "deep-iforest" by "xuhongzuo". This repo provides an online algorithm to the original
+Deep Isolation Forest algorithm. This repo is a suppliment to the paper Onine Deep Isolation Forest which is based on the paper Deep Isolation 
+Forest. 
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/deep-isolation-forest-for-anomaly-detection/anomaly-detection-on-kaggle-credit-card-fraud)](https://paperswithcode.com/sota/anomaly-detection-on-kaggle-credit-card-fraud?p=deep-isolation-forest-for-anomaly-detection)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/deep-isolation-forest-for-anomaly-detection/anomaly-detection-on-forest-covertype)](https://paperswithcode.com/sota/anomaly-detection-on-forest-covertype?p=deep-isolation-forest-for-anomaly-detection)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/deep-isolation-forest-for-anomaly-detection/anomaly-detection-on-nb15-backdoor)](https://paperswithcode.com/sota/anomaly-detection-on-nb15-backdoor?p=deep-isolation-forest-for-anomaly-detection)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/deep-isolation-forest-for-anomaly-detection/anomaly-detection-on-nb15-dos)](https://paperswithcode.com/sota/anomaly-detection-on-nb15-dos?p=deep-isolation-forest-for-anomaly-detection)
-
-
-This repository is the source code of the paper "**Deep Isolation Forest for Anomaly Detection**" published in TKDE (April 2023).  (see full paper at https://arxiv.org/abs/2206.06602 or https://ieeexplore.ieee.org/document/10108034/ )   
-
-
-### How to use?
-
-
-DIF provides easy APIs like the sklearn style.
-We first instantiate the model class by giving the parameters  
-then, the instantiated model can be used to fit and predict data
-
-```python
-from algorithms.dif import DIF
-model_configs = {'n_ensemble':50, 'n_estimators':6}
-model = DIF(**model_configs)
-model.fit(X_train)
-score = model.predict(X_test)
-```
-
-:boom:**Note:** 
-- DIF is also included in our `DeepOD` python library. Please see https://github.com/xuhongzuo/DeepOD 
-- Please also see the Zhihu blog (in Chinese) https://zhuanlan.zhihu.com/p/625557221 
-
-
-### Citation
-
-Please consider citing our paper if you find this repository useful.  
-
-H. Xu, G. Pang, Y. Wang and Y. Wang, "Deep Isolation Forest for Anomaly Detection," in IEEE Transactions on Knowledge and Data Engineering, doi: 10.1109/TKDE.2023.3270293.
-
-```
-@ARTICLE{xu2023deep,
-  author={Xu, Hongzuo and Pang, Guansong and Wang, Yijie and Wang, Yongjun},
-  journal={IEEE Transactions on Knowledge and Data Engineering}, 
-  title={Deep Isolation Forest for Anomaly Detection}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-14},
-  doi={10.1109/TKDE.2023.3270293}}
-
-```
-
-
----
+###Important Files
+As this repo is experimental, many of the files came with the orginal deep-iforest. We have created many files experimentally some of
+which are not required or will not be used. Please ignore the naming of some of the important files as some of them still contain the 
+word "test" or even "copy". We will fix the names as soon as we can. The important/significant files are:
+1. algorithms/dif.py - comes with the deep-iforest repo but we modified it 
+2. main6.py - we run the experiments from there; modified version of the main.py came with deep-iforest; 
+3. dif_test_dataset_2_copy.py - contains among others our online algorithm and some custom implementations emulating some necessary scikit learn functions 
+ 
+###References to the paper related to the repo deep-iforest by xuhongzuo
+Hongzuo Xu, Guansong Pang, Yijie Wang and Yongjun Wang. 2023.
+Deep Isolation Forest for Anomaly Detection. IEEE Trans. Know. Data
+Engineering, 2023.
